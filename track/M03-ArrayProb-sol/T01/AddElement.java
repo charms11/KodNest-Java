@@ -15,8 +15,12 @@ public class AddElement {
         }
         System.out.println("Enter the element to be added:");
         int element = sc.nextInt();
+
+        // Create new array with size n + 1
         int newArr[] = new int[n + 1];
-        System.arraycopy(arr, 0, newArr, 0, n);
+        for (int i = 0; i < n; i++) {
+            newArr[i] = arr[i];
+        }
         newArr[n] = element;
 
         System.out.println("Array elements are:");
